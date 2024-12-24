@@ -1,0 +1,56 @@
+@media (max-width:1299px){
+    h1{
+        font-size: 65px;
+    }
+} 
+
+
+
+@media (max-width:991px){
+    h2{
+        font-size: 30px;
+        line-height: 40px;
+    }
+    
+    h3{
+        font-size: 20px;
+    }
+
+    .navbar{
+        background: var(--text-white);
+    }
+} 
+
+
+
+@media (max-width:767px){
+    h1{
+        font-size: 40px;
+        line-height: 48px;
+    }
+    /* h2{
+        font-size: 30px;
+        line-height: 40px;
+    }
+    
+    h3{
+        font-size: 20px;
+    } */
+    p{
+        font-size: 14px;
+        line-height: 24px;
+    }
+
+    .header__logo{
+        max-width: 80px;
+    }
+    
+    #home{
+        padding-top: 100px;
+    }
+
+
+
+
+
+} 
