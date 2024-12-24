@@ -26,11 +26,72 @@ navBar.forEach(function (a){
     })
 })
 
-
-
-
-
 // Header Part Done
+
+
+
+
+// =======For Lenis======
+
+const lenis = new Lenis();
+
+// Use requestAnimationFrame to continuously update the scroll
+function raf(time) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+}
+
+requestAnimationFrame(raf);
+
+// Synchronize Lenis scrolling with GSAP's ScrollTrigger plugin
+lenis.on('scroll', ScrollTrigger.update);
+
+// Add Lenis's requestAnimationFrame (raf) method to GSAP's ticker
+// This ensures Lenis's smooth scroll animation updates on each GSAP tick
+
+gsap.ticker.add((time) => {
+    lenis.raf(time * 1000); // Convert time from seconds to milliseconds
+});
+
+// Disable lag smoothing in GSAP to prevent any delay in scroll animations
+gsap.ticker.lagSmoothing(0);
+
+
+
+
+
+
+// ========For Text Animation=========
+
+const allReveal = document.querySelectorAll('.revel__text');
+
+allReveal.forEach((revelText) => {
+
+    const split_text = new SplitType(revelText, {types: 'chars'});
+
+    gsap.from(split_text.chars, {
+
+        scrollTrigger: {
+            trigger: revelText,
+            scroller: "body",
+            // markers: true,
+            start: 'top 90%',
+            end: 'top 60%',
+            scrub: 2,
+        },
+
+        x: 3,
+        opacity: 0.7,
+        stagger: .009,
+        duration: 0.1,
+        color: '#6e6e6e89'
+
+    });
+
+
+})
+
+
 
 
 
