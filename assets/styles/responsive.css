@@ -3,6 +3,21 @@
         font-size: 65px;
     }
 } 
+@media (max-width:1180px){
+    .about__section{
+        padding-bottom: 190px;
+    }
+    .about__card{
+        z-index: 10;
+        right: -25%;
+        top: 35%;
+    }
+
+    .offers__card .offers__text{
+        max-width: 60%;
+    }
+
+} 
 
 
 
@@ -19,6 +34,20 @@
     .navbar{
         background: var(--text-white);
     }
+
+    .about__section{
+        padding-bottom: 100px;
+    }
+
+    .about__card{
+        top: 0;
+        right: unset;
+    }
+
+    .offers__card .offers__text{
+        max-width: 70%;
+    }
+
 } 
 
 
@@ -49,8 +78,32 @@
         padding-top: 100px;
     }
 
+    .menu__section .row{
+        padding-top: 50px;
+    }
+
+    .menu__section .card{
+        margin-bottom: 10px;
+    }
+
+    .menu__section .card h3 span{
+        width: 50px;
+        height: 50px;
+    }
+
+    .offers__card .offers__text{
+        max-width: 50%;
+    }
+
 
 
 
 
 } 
+
+@media (max-width:400px){
+
+    .offers__card .offers__text{
+        max-width: 65%;
+    }
+}
