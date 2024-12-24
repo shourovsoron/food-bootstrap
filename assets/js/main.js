@@ -61,7 +61,7 @@ gsap.ticker.lagSmoothing(0);
 
 
 
-// ========For Text Animation=========
+// ========For Text Reavel Animation=========
 
 const allReveal = document.querySelectorAll('.revel__text');
 
@@ -84,6 +84,33 @@ allReveal.forEach((revelText) => {
         opacity: 0.7,
         stagger: .009,
         duration: 0.1,
+        color: '#6e6e6e89'
+
+    });
+
+
+});
+
+
+
+// ===== For Text Dancing animation=====
+const allDancing = document.querySelectorAll('.dancing-text');
+
+allDancing.forEach((dancingText) => {
+
+    const dancing_text = new SplitType(dancingText, {types: 'chars'});
+
+    gsap.from(dancing_text.chars, {
+
+        scrollTrigger: {
+            trigger: dancingText,
+        },
+
+        y: -50,
+        opacity: 0.7,
+        stagger: .1,
+        duration: 3,
+        ease: "elastic.out(1.2,0.2)",
         color: '#6e6e6e89'
 
     });
