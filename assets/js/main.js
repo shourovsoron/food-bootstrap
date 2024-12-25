@@ -86,7 +86,7 @@ document.addEventListener("DOMContentLoaded", () => {
             scale: scale,
             rotationX: rotate,
             transformOrigin: "top center",
-            ease: 'none',
+            ease: "power1.out",
 
             scrollTrigger: {
                 trigger: card,
@@ -95,7 +95,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 endTrigger: '.end-anim',
                 pin: card,
                 pinSpacing: false,
-                scrub: true,
+                scrub: 2,
                 // markers: true
 
 
