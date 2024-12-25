@@ -302,6 +302,20 @@ p{
 
 }
 
+.offers__stacky .offers__card{
+    min-height: 400px;
+    height: 100%;
+    background-position: center center;
+    background-size: cover;
+
+}
+
+.end-anim{
+    height: 20px;
+    visibility: hidden;
+    /* margin-top: 300px; */
+}
+
 .offers__card .offers__text{
     max-width: 50%;
     width: 100%;
