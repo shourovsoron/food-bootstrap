@@ -64,11 +64,14 @@ gsap.ticker.lagSmoothing(0);
 // Initialize GSAP animation
 document.addEventListener("DOMContentLoaded", () => {
 
+
+
     const cards = document.querySelectorAll(".stacky__card");
 
     cards.forEach((cardd, i) => {
 
         const card = cards[i];
+        let bottomPosition = 600;
         let scale = 1,
             rotate = 0;
 
@@ -78,6 +81,10 @@ document.addEventListener("DOMContentLoaded", () => {
             rotate = -10
         }
 
+        console.log(window.innerWidth)
+        if(window.innerWidth <= 769){
+            bottomPosition = 450;
+        }
 
 
         // Stacking animation
@@ -91,7 +98,7 @@ document.addEventListener("DOMContentLoaded", () => {
             scrollTrigger: {
                 trigger: card,
                 start: `top ${(150 + 10 * i)}`,
-                end: 'bottom 600',
+                end: `bottom ${bottomPosition}`,
                 endTrigger: '.end-anim',
                 pin: card,
                 pinSpacing: false,
